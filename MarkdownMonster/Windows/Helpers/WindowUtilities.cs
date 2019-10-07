@@ -281,7 +281,7 @@ namespace MarkdownMonster.Windows
         /// </summary>
         /// <param name="source"></param>
         /// <returns></returns>
-        public static Bitmap BitmapSourceToBitmap(BitmapSource source)
+        public static System.Drawing.Bitmap BitmapSourceToBitmap(BitmapSource source)
         {
             if (source == null)
                 return null;

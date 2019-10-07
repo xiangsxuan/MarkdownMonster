@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+#if NETFULL
 using System.Speech.Synthesis;
+#endif
 using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
@@ -23,12 +25,14 @@ using Westwind.Utilities;
 
 namespace MarkdownMonster
 {
-    public class
-        AppCommands
+    public class AppCommands
     {
         AppModel Model;
 
+#if NETFULL
+
         public SpeechCommands Speech { get;  }
+#endif
         public GitCommands Git { get;  }
 
         public AppCommands(AppModel model)

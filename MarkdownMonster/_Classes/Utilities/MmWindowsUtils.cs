@@ -261,7 +261,7 @@ namespace MarkdownMonster.Utilities
 
             dlg.SelectedPath = initialPath;
             dlg.ShowNewFolderButton = true;
-            dlg.UseDescriptionForTitle = true;
+            //dlg.UseDescriptionForTitle = true;
             var result = dlg.ShowDialog();
 
             Directory.SetCurrentDirectory(oldPath);

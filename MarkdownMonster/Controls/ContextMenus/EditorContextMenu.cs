@@ -213,6 +213,7 @@ namespace MarkdownMonster.Controls.ContextMenus
 
         public void AddSpeech()
         {
+#if NETFULL
             var hasDocumentSelection = !string.IsNullOrEmpty(Model.ActiveEditor?.AceEditor?.GetSelection());
             var hasClipText = Clipboard.ContainsText();
 
@@ -226,13 +227,14 @@ namespace MarkdownMonster.Controls.ContextMenus
                     IsEnabled = hasDocumentSelection
                 };
                 mi.Items.Add(mi2);
-            
 
+           
             mi2 = new MenuItem()
             {
                 Header = "Speak _Document",
                 Command = Model.Commands.Speech.SpeakDocumentCommand
             };
+
             mi.Items.Add(mi2);
 
 
@@ -252,6 +254,7 @@ namespace MarkdownMonster.Controls.ContextMenus
                 Command = Model.Commands.Speech.CancelSpeakCommand
             };
             mi.Items.Add(mi2);
+#endif
         }
 
         public void AddUndoRedo()

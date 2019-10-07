@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <Version>1.18</Version>
-    <TargetFramework>net462</TargetFramework>
-    <!--<TargetFrameworks>net462;netcoreapp3.0</TargetFrameworks>-->
+    <!--<TargetFramework>net462</TargetFramework>-->
+    <TargetFrameworks>net462;netcoreapp3.0</TargetFrameworks>
     <AssemblyName>WeblogAddin</AssemblyName>
     <UseWPF>true</UseWPF>
     
